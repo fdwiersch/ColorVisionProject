@@ -4,9 +4,16 @@ Cones4Color
 
 ## Description
 
-**version 1.0**
+version 1.0
 
-allows the comparison btween two rgb colors wheather they are considered dangerously close, iffily close, or well enough apart to be considerd good. program is repeated untill user opts out
+allows the comparison between two rgb colors wheather they are considered dangerously close, iffily close, or well enough apart to be considerd good. program is repeated until user opts out
+
+version 2.0 Updates
+
+allows the comparison between two or more Hex colors 
+if only comparing two colors the program provides their difference in luminosity
+if comparing more than two colors the program will provide the user the two colors in their palette who based on luminosity are the closest in value
+--> this allows the user to tweak their closest colors in hopes of having wide enough differences between all the colors in their palette
 
 ## Developer
 
@@ -21,16 +28,15 @@ g++ --std=c++11 *.cpp -o cvp
 ./cvp
 ```
 
-Here is an example of the program running:
-
-R G B #1: 100 100 100
-R G B #2: 90 88 103
-Red difference: 10
-Blue difference: 12
-Green difference: 3
-
-Total difference: 25
-
-iffy
-
-continue? (1/0): 
+input hex #RRGGBB (type 'done' once all colors are inputed): #123456
+input hex #RRGGBB (type 'done' once all colors are inputed): #F1017A
+input hex #RRGGBB (type 'done' once all colors are inputed): #098765
+input hex #RRGGBB (type 'done' once all colors are inputed): #ABCDEF
+input hex #RRGGBB (type 'done' once all colors are inputed): done
+comparing...
+#123456
+#F1017A
+#098765
+#ABCDEF
+The Hex values of #F1017A and #098765 have the closest luminosity with a difference of 6.896
+differences lower than 2-3% are generally considered undetectable.
